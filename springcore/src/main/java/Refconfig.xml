@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:c="http://www.springframework.org/schema/c"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ 
+ <bean class="com.springcore.ref.Address" name="address" 
+ 		c:street="JM Road" c:city="Pune" c:pin="411001"/>
+ 		
+<bean class="com.springcore.ref.Student" name="student" >
+ 
+ 		<constructor-arg value="111"/>	
+ 		<constructor-arg value="Smith"/>
+ 		<constructor-arg ref="address"/> 		
+ </bean>		
+
+ 		
+<bean class="com.springcore.ref.Employee" name="employee" >
+ 
+ 		<constructor-arg value="121"/>	
+ 		<constructor-arg value="Rutu"/>
+ 		<constructor-arg ref="address"/> 		
+ </bean>
+  		
+<bean class="com.springcore.ref.Person" name="person" >
+ 
+ 		<constructor-arg value="Indra"/>	
+ 		<constructor-arg value="101"/>
+ 		<constructor-arg ref="address"/> 		
+ </bean>
+ </beans>

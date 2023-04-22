@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- open spring documentation from browser search ioc click on it copy the metadata -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ 
+ <!-- bean will create object of pojo class with name student , this object is store in IOC container -->
+ <bean name="st" class="com.springcore.Student" p:stud_id="101" p:stud_name="Indra" p:stud_age="25"/>
+<!--  second way to get properties of class with p_schemas -->
+<!--  first way to get properties of class 
+<property name="stud_id">
+ <value>101</value>
+ </property>
+ 
+ <property name="stud_name">
+ <value>John</value>
+ </property>
+ 
+ <property name="stud_age" value="25"/> 
+ 
+ </bean>-->
+
+
+  <bean name="empl" class="com.springAssignment.Employee" p:emp_id="101" p:emp_name="Indra" p:designation="Java Devoloper" p:salary="90000"/>
+ 
+ </beans>
+ 

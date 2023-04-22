@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean  class="com.assignment.Department" name="dep"
+ p:Dept_no="111" p:Dept_name="Testing" p:location="Pune"/>
+ 
+ <bean  class="com.assignment.Department" name="dep2"
+ p:Dept_no="112" p:Dept_name="Development" p:location="Bangalore"/>
+ 
+ <bean  class="com.assignment.Department" name="dep3"
+ p:Dept_no="113" p:Dept_name="Deployment" p:location="Delhi"/>
+ 
+ <!-- <bean class="com.assign2.Person" name="per1" p:p_id="001" p:p_name="Indra" p:dept="dep" > -->
+<bean class="com.assignment.Person" name="per1">
+
+        <property name="p_id">
+			<value>101</value>
+		</property>
+		
+		<property name="p_name">
+			<value>Harshal</value>
+		</property>
+		
+		<property name="dept" ref="dep">
+			
+		</property>
+		 
+  
+</bean>
+
+<bean class="com.assignment.Person" name="per2">
+
+	 <property name="p_id">
+			<value>102</value>
+		</property>
+		
+		<property name="p_name">
+			<value>Vinayak</value>
+		</property>
+		
+		<property name="dept" ref="dep2">
+			
+		</property>
+  
+</bean>
+
+
+<bean class="com.assignment.Person" name="per3">
+
+	 <property name="p_id">
+			<value>103</value>
+		</property>
+		
+		<property name="p_name">
+			<value>Indra</value>
+		</property>
+		
+		<property name="dept" ref="dep2">
+			
+		</property>
+  
+</bean>
+   
+</beans>
+ 
+ 
+  
+  
